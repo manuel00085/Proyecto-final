@@ -1,0 +1,70 @@
+body{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.resultado{
+
+    width: auto;
+    height: auto;
+    border: solid #eaeced;
+    border-radius: 5%;
+
+}
+
+.head{
+    min-width: 300px;
+    display: flex;
+    
+    background-size: cover;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.status p{
+    text-align: center;
+    
+}
+
+.estado{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+background-color: rgb(191, 203, 214);
+}
+
+
+
+.Total{
+    text-align: center;
+}
+
+
+
+.Total button{
+
+   
+    font-weight: 600;
+    font-variant: normal;
+    font-size: 100%;
+    border-radius: 25px;
+    height: 35px;
+
+    width: 90%;
+    min-height: 40px;
+    border: 0;
+   
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #142c8e;
+    color: #fff;
+cursor: pointer;
+    text-shadow: none;
+    text-decoration: none;
+    transition: color .2s ease,background-color .2s ease,border-
+
+}

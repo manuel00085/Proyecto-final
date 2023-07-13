@@ -1,0 +1,113 @@
+{
+    "Articulos":[
+        {
+            "Titulo": "katherine",
+            "Precio": "15",
+            "Categoria": "Reloj",
+            "id": 1,
+            "img":"/DB/img/englishrose.png"
+        },
+        {
+            "Titulo": "English Horse",
+            "Precio": "25",
+            "Categoria": "Reloj",
+            "id": 2,
+            "img":"/DB/img/nike-1.png"
+        },
+        {
+            "Titulo": "Knock Nap",
+            "Precio": "25",
+            "Categoria": "Reloj",
+            "id": 3,
+            "img":"/DB/img/knocknap.png"
+        },
+        {
+            "Titulo": "La Night",
+            "Precio": "18",
+            "Categoria": "Reloj",
+            "id": 4,
+            "img":"/DB/img/lanight.png"
+        },
+        {
+            "Titulo": "Silver All",
+            "Precio": "32",
+            "Categoria": "Reloj",
+            "id": 5,
+            "img":"/DB/img/silverall.png"
+        },
+        {
+            "Titulo": "Skin Glam",
+            "Precio": "18",
+            "Categoria": "Reloj",
+            "id": 6,
+            "img":"/DB/img/skinglam.png"
+        },
+        {
+            "Titulo": "Midimix",
+            "Precio": "54",
+            "Categoria": "Reloj",
+            "id": 7,
+            "img":"/DB/img/midimix.png"
+        },
+        {
+            "Titulo": "Blue Gastin",
+            "Precio": "32",
+            "Categoria": "Reloj",
+            "id": 8,
+            "img":"/DB/img/sirblue.png"
+        },
+        {
+            "Titulo": "Middlesteel",
+            "Precio": "42",
+            "Categoria": "Reloj",
+            "id": 9,
+            "img":"/DB/img/middlesteel.png"
+        },
+        {
+            "Titulo": "Gorra Guest",
+            "Precio": "20",
+            "Categoria": "Gorra",
+            "id": 10,
+            "img":"/DB/img/gorraguest.jpeg"
+        },
+        {
+            "Titulo": "Gorra Guest",
+            "Precio": "20",
+            "Categoria": "Gorra",
+            "id": 11,
+            "img":"/DB/img/gorraguest.jpeg"
+        },
+        {
+            "Titulo": "Blue Gastin",
+            "Precio": "32",
+            "Categoria": "Reloj",
+            "id": 12,
+            "img":"/DB/img/sirblue.png"
+        },
+        {
+            "Titulo": "Blue Gastin",
+            "Precio": "32",
+            "Categoria": "Reloj",
+            "id": 13,
+            "img":"/DB/img/sirblue.png"
+        },
+        {
+            "Titulo": "Blue Gastin",
+            "Precio": "32",
+            "Categoria": "Reloj",
+            "id": 14,
+            "img":"/DB/img/sirblue.png"
+        }
+
+
+
+
+
+
+
+
+    ]
+
+
+
+}

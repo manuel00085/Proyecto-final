@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate o inicia sesion</title>
+    <link rel="stylesheet" href="/Login/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+<body>
+
+    <div class="lugaralert">
+        <div class="notificacion">
+            
+    
+        </div>
+    
+
+
+    </div>
+
+<section class="login-registro">
+
+    <div class="wrapper">
+        <div class="form-box login">
+    
+            <h2>Inicio de Sesion</h2>
+            <form action="#" id="sub-login">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="text" required id="Login-mail"> 
+                    <label for="">Correo</label>
+    
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" required id="Login-password"> 
+                    <label for="">Contraseña</label>
+    
+                </div>
+          
+                <button type="submit" class="btn">Iniciar Sesion</button>
+                <div class="login-register">
+                    <p>¿No tienes Cuenta?</p>
+
+                    <a href="#" class="register-link">Registrate</a>
+    
+                </div>
+            </form>
+    
+    
+        </div>
+        <div class="form-box register">
+    
+            <h2>Registro</h2>
+            <form action="#" id="accion-register">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <input type="text" id="usernameInput" required autocomplete="off">
+                    <label for="">Nombre de Usuario</label>
+    
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="text" id="emailInput" required autocomplete="off">
+                    <label for="">Correo</label>
+    
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    <input type="text" id="phoneInput" required autocomplete="off">
+                    <label for="">Telefono</label>
+    
+                </div>
+                <div class="input-box ">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" id="passInput" required>
+                    <label for="">Contraseña</label>
+    
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" id="matchInput" required>
+                    <label for="">Repita Contraseña</label>
+    
+                </div>
+                <div class="remember-forgot">
+                    <label for=""><input id="checkAgre" type="checkbox">Aceptar Terminos y Condiciones
+                    </label>
+                    
+    
+                </div>
+                <button type="submit" class="btn">Registrar</button>
+                <div class="login-register">
+                    <p>¿Ya estas Registrado?<a
+                    href="#" class="login-link">Login</a></p>
+    
+                </div>
+            </form>
+    
+    
+        </div>
+    
+    
+    </div>
+
+
+
+</section>
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script  src="register.js"></script>
+<script src="login.js"></script>
+
+</body>
+</html>

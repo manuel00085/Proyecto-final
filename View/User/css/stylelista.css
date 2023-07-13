@@ -1,0 +1,76 @@
+.factura-posicion{
+    width: 80%;
+    
+    flex-grow: 1;
+}
+
+.factura-posicion h1{
+    text-align: center;
+}
+
+
+
+.lista-factura{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    
+}
+
+.lista-factura table{
+  width: 80%;
+    
+}
+
+.lista-factura table tr{
+    border-bottom: 1px solid black;
+}
+
+.infoTotal-posc{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    align-items: center;
+}
+.infoTotal-posc select{
+    height: 40px;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.passPay{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+.lista-Compra{
+    display:list-item;
+    justify-content: center;
+    width: 100%;
+    padding: 8px;
+    flex-wrap: wrap;
+    
+    
+}
+
+.lista-Compra table{
+  width: 100%;
+  align-items: center;
+  
+    
+}
+
+.lista-Compra table tr{
+    border-bottom: 1px solid black;
+    font-size: 13px;
+    text-align: center;
+}

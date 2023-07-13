@@ -1,0 +1,509 @@
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+   
+    top: 0;
+    left: 0;
+    font-family: 'Spartan', sans-serif;
+    align-items: center;
+    
+
+}
+
+.logoHe{
+    display: flex;
+    gap: 15px;
+}
+
+.flex-buscador{
+    position: relative;
+    padding: 5px;
+
+    width: 400px;
+
+}
+.flex-buscador input{
+    
+    width: 100%;
+    height: 35px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: 0.6s ease;
+
+
+}
+
+.buscadorBtn{
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    
+    background: #666363;
+    width: 33px;
+    height: 34px;
+    line-height: 35px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color:#222;
+    transition: 0.3s ease ;
+}
+#navbar li a:hover,
+#navbar li a.active{
+
+    color: cadetblue;
+}
+
+#navbar li a.active::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background:  cadetblue;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#navbar li i svg{
+    height: 35px ;
+    width: 35px;
+}
+
+
+.submenu #carrito{
+  
+    display: none;
+ 
+
+
+}
+.submenu:hover #carrito{
+    
+    display: block;
+    position: absolute;
+    right: 0;
+    top:100%;
+    z-index: 1;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    border: 3px  solid white;
+    
+}
+
+
+
+
+#lista-carrito{
+    
+    display: block;
+    
+    width: 380px;
+    max-height: 400px;
+   overflow-y:auto;
+     
+    
+     
+ 
+ }
+ #lista-carrito tr{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    align-items: center
+ }
+ #lista-carrito td{
+    align-items: center;
+    text-align: center;
+
+ }
+
+
+/* visitante  */
+
+.submenu #Visitante{
+  
+    display: none;
+
+
+}
+.submenu:hover #Visitante{
+    
+    display: block;
+    position: absolute;
+    right: 20px;
+    top:100%;
+    
+    border-radius: 10px;
+    padding: 15px;
+
+    height:150px ;
+    width: 320px;
+    background: transparent;
+    border: 2px solid rgba(225, 255, 255, .5);
+    backdrop-filter: blur(50px);
+    
+}
+
+#Visitante h4{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+.sesionbtn button{
+    width: 100%;
+    height: 40px;
+    background: #132938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.registrobtn{
+    margin-top: 30px;
+}
+
+.sesionbtn h4{
+    font-size: 50px;
+}
+
+.registrobtn button{
+    width: 100%;
+    height: 40px;
+    background: #132938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+
+
+
+  /* Con login */
+
+  .submenu #InicioS{
+    display: none;
+
+ }
+
+
+
+.submenu:hover #InicioS{
+    
+    line-height: 22px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top:100%;
+    text-align: end;
+    border-radius: 20px;
+    padding: 0px 20px;
+    height:220px ;
+    width: 250px;
+    background: transparent;
+    border: 2px solid rgba(97, 105, 105, 0.897);
+    background-color: #222;
+  
+    
+}
+
+#InicioS h4{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+#InicioS p{
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.text {
+    transition: transform 0.3s ease;
+  }
+  
+  .text:hover {
+    transform: scale(1.1);
+  }
+
+
+#InicioS button{
+    width: 100%;
+    height: 30px;
+    background: #132938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+#InicioS a{
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+
+
+
+}
+
+
+ 
+ 
+.u-full-width {
+   
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.borrar-curso {
+    
+    background-color: rgba(170, 163, 163, 0.781);
+    border-radius:100%;
+    text-decoration: none;
+    font-weight:bolder;
+    padding: 5px 8px;
+    
+    
+}
+
+
+.button {
+    margin: 10px auto;
+    display: inline-block;
+    height: 38px;
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+    
+    
+}
+
+.importeTotal{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.importeTotal button{
+
+    height: 40px;
+    width: 95px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fd8320ef;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .5s ease;
+    
+}
+
+.importeTotal button:hover{
+    transform: scale(1.1);
+}
+
+
+.Hambuerguesa{
+    display: none;
+}
+.Cerrar{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width:1230px) {
+  
+    .logop{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:900px) {
+
+
+    .Hambuerguesa{
+        display: flex;
+
+
+    }
+
+  
+    #navbar{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+       gap: 1rem;
+       
+        position: absolute;
+        background-color: #555;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
+
+        
+        
+    }
+    #navbar.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .Cerrar{
+        display: block;
+    }
+    
+    #navbar li{
+        list-style: none;
+        padding: 15px;
+        width:200px;
+        text-align: center;
+        
+    }
+    
+    #navbar li a{
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 400;
+        color:#ffffff;
+        transition: 0.3s ease ;
+    }
+
+.logop{
+        display: none;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+   
+    top: 0;
+    left: 0;
+    font-family: 'Spartan', sans-serif;
+    align-items: center;
+    
+
+}
+.submenu:hover #carrito{
+    
+    display: block;
+    position: absolute;
+    right: 0;
+    top:100%;
+    z-index: 1;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    border: 3px  solid white;
+    
+}
+
+
+
+.flex-buscador{
+    position: relative;
+    padding: 5px;
+
+    width: 270px;
+    height: auto;
+
+
+}
+
+.flex-buscador input{
+    justify-content: space-between;
+    width: 100%;
+    height: 30px;
+    padding: 0 20px;
+    font-size: 12px;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: 0.6s ease;
+
+
+}
+
+
+}
+
+

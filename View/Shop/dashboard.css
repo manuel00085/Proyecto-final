@@ -1,0 +1,180 @@
+
+
+/* dashboard */
+
+
+
+.dropdown-menu {
+    margin: auto;
+    background: #262a34;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+
+.menuperfil {
+    color: white;
+}
+
+.menuperfil:focus {
+    background: #23ae6b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+
+.cerrar:hover {
+    background-color: rgba(206, 65, 22, 0.877);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+
+.user {
+    font-size: 35px;
+}
+
+
+/*BARRA LATERAL*/
+
+.barra-lateral {
+    background: #252121;
+    color: #fff;
+    min-width: 250px;
+    height: auto;
+    padding: 0;
+    position: initial;
+    top: 0;
+}
+
+.barra-lateral a {
+    color: #fff;
+}
+
+
+/*ESTILOS MENU*/
+
+.barra-lateral .menu a {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.barra-lateral .menu a:hover {
+    background-color: #003C5D;
+    text-decoration: none;
+}
+
+.active {
+    background: #003C5D;
+}
+
+.submenuDash{
+font-size: 15px;
+padding: 10px;
+display:flex;
+flex-direction: column;
+align-items:flex-start;
+border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+
+}
+.submenuDash span{
+    transition: 0.1s ;
+    cursor: pointer;
+}
+
+.submenuDash span:hover{
+   transform: scale(1.1);
+}
+
+.hidden{
+display: none;
+}
+
+
+
+
+
+/*mediaquerys*/
+
+@media screen and (max-width:1300px) {
+    .barra-lateral {
+        min-width: auto;
+    }
+    .barra-lateral .menu a span {
+        display: none;
+    }
+    .barra-lateral .menu a i {
+        margin: 0;
+    }
+    .barra {
+        min-width: auto;
+    }
+    .dropdown-menu {
+        margin: 20px -79px 0px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .barra-lateral {
+        min-height: auto;
+    }
+    .barra-lateral .menu a {
+        display: inline-block;
+        border-bottom: none;
+    }
+    .dropdown-menu {
+        margin: 10px -78px 0px;
+    }
+    .logocppe {
+        width: 100%;
+    }
+    body {
+        background: #D3D3D3;
+        font-size: 16px;
+        overflow: visible;
+    }
+}
+
+.formulariorecursos {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.568);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+
+@media screen and (max-width:575px) {
+    .barra-lateral {
+        height: auto;
+    }
+    .barra-lateral.menu a {
+        display: inline-block;
+        border-bottom: none;
+    }
+    .dropdown-menu {
+        margin: 20px -78 0px;
+    }
+    body {
+        font-size: 16px;
+        overflow: visible;
+ 
+    }
+}
+
+
+@media screen and (max-width:580px) {
+
+    .flex-posicion {
+        display: block;
+    }
+    .submenuDash{
+        font-size: 10px;
+      
+      
+    }
+    .fa-square-caret-down{
+        display: none;
+    }
+}

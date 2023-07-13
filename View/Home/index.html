@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garcia Store 23</title>
+    <link rel="stylesheet" href="/Componentes/HeaderStyle.css">
+    <link rel="stylesheet" href="/banner.css">
+    <script src="https://kit.fontawesome.com/d0b05c108e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section id="header">
+
+    </section>
+    <section class="banner-mov" >
+        <div class="slider">
+            <div class="slides">
+
+
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="slide first">
+                    <img src="./portadas/Sin título-2.png" alt="">
+                   
+
+                </div>
+                <div class="slide">
+                    <img src="./portadas/4.png"  alt="">
+                    
+
+                </div>
+                <div class="slide">
+                    <img src="./portadas/1.png" alt="">
+
+                </div>
+                <div class="slide">
+                    <img src="./portadas/2.png" width="1400" alt="">
+
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+
+                </div>
+
+            </div>
+            
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+
+            </div>
+
+
+
+        </div>
+
+        <script>
+            var counter=1;
+            setInterval(function(){
+                document.getElementById('radio' + counter).checked=true;
+                counter++;
+                if(counter>4){
+                    counter=1
+                }
+            },4000)
+        </script>
+
+    </section>
+
+    <section class="caracteristicas">
+        <div class="flex-carac">
+            <div class="info-carac">
+                <img src="img/home-intro-banner.png" alt="">
+                <h2>Productos Importados</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, cum pariatur repudiandae ex laudantium accusamus molestias doloremque harum laborum suscipit quia odio nihil quibusdam! Similique magni at ducimus sint ut.</p>
+                <a href="">Origen de sus Productos</a>
+
+            </div>
+            <div class="info-carac">
+                <img src="img/llegamos-1636494880810_1200x.webp" alt="">
+                <h2>Recibe tu Producto</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde eaque aliquid, officia recusandae culpa cupiditate tempore neque possimus molestiae totam earum ipsum voluptatum dolores deleniti, corporis a temporibus sint sequi?</p>
+                <a href="">Como coordino la entrega</a>
+            </div>
+            <div class="info-carac" >
+                <img src="img/images.png" alt="">
+                <h2>Compra Seguro</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas aut dolores facilis et atque beatae sed, optio libero mollitia ducimus dolore aspernatur ut excepturi tenetur fugit corporis at iure?</p>
+                <a href="">Como es el sistema de compra</a>
+            </div>
+
+        </div>
+
+
+    </section>
+    <section id="product1" class="section-p1">
+        <div class="features-banner">
+            <h2>Nuevos Productos</h2>
+            <p>Las Mejores Marcas del Mercado</p>
+
+        </div>
+
+        <div class="pro-container">
+            <div class="pro">
+                <img src="http://localhost:4000/Db/img/nike2.jpeg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5>Kevin Durant Trey 5 X</h5>
+   
+                    <h4>$78</h4>
+                </div>
+
+                
+
+            </div>
+            <div class="pro">
+                <img src="http://localhost:4000/Db/img/nike6.jpeg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5> Kevin Durant Trey 5 X</h5>
+         
+                    <h4>$78</h4>
+                </div>
+            
+            </div>
+            <div class="pro">
+                <img src="http://localhost:4000/Db/img/nike1.jpeg" alt="">
+                <div class="des">
+                    <span>Nike</span>
+                    <h5> Kevin Durant Trey 5 X</h5>
+              
+                    <h4>$78</h4>
+                </div>
+           
+            </div>
+            <div class="pro">
+                <img src="http://localhost:4000/Db/img/adidas1.jpeg" alt="">
+                <div class="des">
+                    <span>Adidas</span>
+                    <h5>Originals Ozelia</h5>
+        
+                    <h4>$78</h4>
+                </div>
+       
+            </div>
+            
+
+        </div>
+
+    </section>
+    <section id="banner">
+        <h4>Promociones</h4>
+        <h2>Hasta del <span>70% de Descuento</span> -Zapatos y Accesorios </h2>
+        <button class="normal">Ir al sitio</button>
+
+
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Descuentos de locura</h4>
+            <h2>Compra 1 y Obtienes el 50% por le segundo</h2>
+            <span>Los Mejores en Vestimenta</span> 
+            <button>Leer Mas</button>
+        </div>
+        <div class="banner-box">
+            <h4>Descuentos de locura</h4>
+            <h2>Compra 1 y Obtienes el 50% por le segundo</h2>
+            <span>Los Mejores en Vestimenta</span> 
+            <button>Leer Mas</button>
+        </div>
+
+
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logof" src="./img/Sin título-1.svg" width="100" height="100" alt="">
+            <h4>Contact</h4>
+            <p><strong>Direccion:</strong> Caracas , Parque Carabobo, Av lecuna</p>
+            <p><strong>Telefono:</strong>02125966984</p>
+            <p><strong>Horario:</strong>De lunes a Viernes, 9Am a 5Pm</p>
+            <div class="follow">
+                <h4>Siguenos</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-youtube"></i>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="">Sobre Nosotros</a>
+            <a href="">Politicas de Privacidad</a>
+            <a href="">Terminos y Condiciones</a>
+            <a href="">Contactanos</a>
+            <a href="/Admin">Administrador</a>
+
+
+
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="">Favoritos</a>
+            <a href="">Facturacion</a>
+            <a href="">Status de Compras</a>
+            <a href="">Ayuda</a>
+
+
+        </div>
+
+        <div class="col install">
+            <h4>Metodos de pago</h4>
+            <p>Paypal</p>
+            <div class="row">
+                <img src="" alt="">
+                <img src="" alt="">
+
+            </div>
+            <p>Segure Payment Gateway</p>
+            <img src="" alt="">
+        </div>
+        <div class="copyright">
+            <p>Todos los derechos reservados</p>
+            
+
+        </div>
+
+    </footer>
+
+<script  src="/Componentes/Header.js"></script>
+
+  
+
+
+    
+</body>
+</html>
+
+
