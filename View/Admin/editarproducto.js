@@ -3,7 +3,7 @@ mostrar()
 const obtenerProducto = async idProducto =>{
     console.log(idProducto)
     try{
-        const resultado = await fetch(`http://localhost:4000/api/Productos/${idProducto}`)
+        const resultado = await fetch(`/Productos/${idProducto}`)
         const producto = await resultado.json();
         console.log(producto)
         return producto; 
@@ -93,7 +93,7 @@ function mostrar (){
         }
 
         try{
-            await fetch(`http://localhost:4000/api/Productos/${producto.Id}`,{
+            await fetch(`/Productos/${producto.Id}`,{
                 method:`PUT`,
                 body:JSON.stringify(producto),
             

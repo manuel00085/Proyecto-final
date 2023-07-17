@@ -1,6 +1,6 @@
 const correoUsuario = JSON.parse(localStorage.getItem('user'));
 
-fetch(`http://localhost:4000/api/Productos/favoritos/${correoUsuario.email}`)
+fetch(`/Usuario/favoritos/${correoUsuario.email}`)
 .then(response => response.json())
 .then(data => {
     construirFavoritos(data)

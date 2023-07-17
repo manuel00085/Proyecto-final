@@ -6,7 +6,7 @@ console.log(Busqueda)
 
 
 
-fetch(`http://localhost:4000/api/Productos/Seach/${Busqueda}`)
+fetch(`/Productos/Seach/${Busqueda}`)
     .then(response => response.json())
     .then(data => {
       if(data.length===0){

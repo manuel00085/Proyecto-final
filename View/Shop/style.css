@@ -40,6 +40,7 @@ p{
 main{
     display: flex;
     width: 100%;
+    flex-direction: column;
 }
 
 #product1{

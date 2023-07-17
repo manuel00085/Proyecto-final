@@ -9,7 +9,7 @@ mostrascompras()
 
 function mostrascompras(){
 
-    fetch(`http://localhost:4000/api/users/${correoUsuario.email}`)
+    fetch(`/Usuario/compras/${correoUsuario.email}`)
     .then(response => response.json())
     .then(data => {
         construirCompras(data)

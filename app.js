@@ -8,6 +8,12 @@ const PUERTO = process.env.PORT || 4000;
 const userRoutes = require("./Routes/User");
 const paymentRoutes = require('./Routes/payment');
 const multerRoutes = require('./Routes/multer');
+const productosRoutes = require('./Routes/productos')
+const passportRoutes = require('./src/confi-passport')
+const cookieParser = require('cookie-parser')
+const session = require('express-session');
+const passport = require('passport');
+
 
 
 
@@ -23,14 +29,23 @@ app.listen(PUERTO, () => {
 })
 
 
-    //----------middleware----------
+////----------middleware----------
 
     app.use(express.json())
     app.use(express.urlencoded({extended:false}))
-    app.use('/api', userRoutes)
+    app.use(cookieParser('mi secreto cookie'))
+    app.use(session({
+        secret:'mi secreto cookie',
+        resave: true,
+        saveUninitialized: true
+    }))
+    app.use(passport.initialize())
+    app.use(passport.session())
+    app.use('/Usuario', userRoutes)
     app.use('/pay',paymentRoutes)
     app.use('/Multer',multerRoutes)
-   
+    app.use('/Productos',productosRoutes)
+    app.use('/pass', passportRoutes)
  
 
     
@@ -38,7 +53,8 @@ app.listen(PUERTO, () => {
 
 
 
-    //mongodb connection//
+
+///mongodb connection//
 
 
 mongoose
@@ -51,10 +67,6 @@ mongoose
 
 ///rutas Html///
 
-/* app.get('/base',(req,res)=>{
-    res.sendFile(__dirname + '/Models/db.json')
-
-})*/
 app.use('/', express.static(path.resolve('View', 'Home')));
 app.use('/login', express.static(path.resolve('View', 'Login')));
 app.use('/Shop', express.static(path.resolve('View', 'Shop')));
@@ -67,16 +79,6 @@ app.use('/Busqueda', express.static(path.resolve('View','Busqueda')));
 app.use('/PaymenRes', express.static(path.resolve('View','Payment')));
 app.use('/Producto', express.static(path.resolve('View','Producto')));
 app.use('/ImgProducto', express.static(path.resolve('Uploads')));
-
-
-
-
-
-/////paypal
-
-
-
-
 
 
 

@@ -1,5 +1,5 @@
 .factura-posicion{
-    width: 80%;
+    width: 100%;
     
     flex-grow: 1;
 }
@@ -13,13 +13,13 @@
 .lista-factura{
     display: flex;
     justify-content: center;
-    width: 100%;
+    
     
     
 }
 
 .lista-factura table{
-  width: 80%;
+  width: 100%;
     
 }
 
@@ -56,7 +56,7 @@
     display:list-item;
     justify-content: center;
     width: 100%;
-    padding: 8px;
+
     flex-wrap: wrap;
     
     

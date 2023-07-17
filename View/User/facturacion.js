@@ -154,7 +154,7 @@ function divTotal(){
 
     const monto={
       suma}
-    const response = await fetch('http://localhost:4000/pay/create-order',{
+    const response = await fetch('/pay/create-order',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

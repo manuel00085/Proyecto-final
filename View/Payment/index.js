@@ -12,7 +12,7 @@ let datosCompra=[]
 async function obtenerCompra(Compra) {
  
     try{
-        const resultado = await fetch(`http://localhost:4000/pay/obtener-order/${idCompra}`)
+        const resultado = await fetch(`/pay/obtener-order/${idCompra}`)
         const Compra = await resultado.json();
         console.log(Compra)
         generarFactura(Compra)
@@ -111,7 +111,7 @@ async function enviarMongo(){
 
     if(Orden.id===datosCompra.id){
 
-        const response = await fetch('http://localhost:4000/api/users/agregar-compra', {
+        const response = await fetch('/Usuario/agregar-compra', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

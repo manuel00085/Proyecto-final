@@ -2,15 +2,21 @@
 
 /* dashboard */
 
-.barra {
-    background: #00ADEF;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin: 0;
+main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
 }
 
+main h1{
+    display: flex;
+    justify-content: center;
+}
+
+
 .dropdown-menu {
-    margin: 17px;
+    margin: auto;
     background: #262a34;
     color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
@@ -40,11 +46,11 @@
 .barra-lateral {
     background: #252121;
     color: #fff;
-    width: 100%;
-    max-height: 600px;
+    min-width: 250px;
+    height: auto;
     padding: 0;
-   
-    
+    position: initial;
+    top: 0;
 }
 
 .barra-lateral a {
@@ -55,11 +61,15 @@
 /*ESTILOS MENU*/
 
 .barra-lateral .menu a {
-    display: block;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
     font-family: Roboto, sans-serif;
     font-weight: 500;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
+    text-decoration: none;
 }
 
 .barra-lateral .menu a:hover {
@@ -71,22 +81,34 @@
     background: #003C5D;
 }
 
+.submenuDash{
+font-size: 15px;
+padding: 10px;
+display:flex;
+flex-direction: column;
+align-items:flex-start;
+border-bottom: 1px solid rgba(255, 255, 255, .1);
 
-.barra-lateral .menu a i {
-    margin-right: 20px;
+
+}
+.submenuDash span{
+    transition: 0.1s ;
+    cursor: pointer;
+}
+
+.submenuDash span:hover{
+   transform: scale(1.1);
+}
+
+.hidden{
+display: none;
+}
+.flex-posicion{
+    display: flex;
 }
 
 
-/*MAIN*/
 
-.main {
-    padding-top: 20px;
-}
-
-.main .columna {
-    padding-left: 40px;
-    padding-right: 40px;
-}
 
 
 /*mediaquerys*/
@@ -112,13 +134,15 @@
 @media screen and (max-width:575px) {
     .barra-lateral {
         min-height: auto;
+        
     }
     .barra-lateral .menu a {
-        display: inline-block;
+        display: flex;
         border-bottom: none;
+        
     }
     .dropdown-menu {
-        margin: 20px -78px 0px;
+        margin: 10px -78px 0px;
     }
     .logocppe {
         width: 100%;
@@ -138,22 +162,25 @@
 
 
 
-@media screen and (max-width:575px) {
-    .barra-lateral {
-        height: auto;
+
+
+@media screen and (max-width:580px) {
+
+    .flex-posicion {
+        display: block;
     }
-    .barra-lateral.menu a {
-        display: inline-block;
-        border-bottom: none;
+    .menu{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
     }
-    .dropdown-menu {
-        margin: 20px -78 0px;
+    .submenuDash{
+        font-size: 10px;
+      
+      
     }
-    body {
-        font-size: 16px;
-        overflow: visible;
+    .fa-square-caret-down{
+        display: none;
     }
-    main{
-        width: 100%;
-    }
+  
 }

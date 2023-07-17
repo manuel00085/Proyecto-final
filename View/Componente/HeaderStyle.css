@@ -392,8 +392,13 @@
 
     .Hambuerguesa{
         display: flex;
+      
 
 
+    }
+    .Hambuerguesa i{
+padding: 6px;
+border: none;
     }
 
   

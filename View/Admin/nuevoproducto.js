@@ -21,7 +21,7 @@
         console.log(formData)
       
 
-        const response = await fetch('http://localhost:4000/Multer/unpload', {
+        const response = await fetch('/Multer/unpload', {
             method: 'POST',
             body: formData
           });
@@ -48,7 +48,7 @@
         }
 
         try{
-            await fetch("http://localhost:4000/api/Productos",{
+            await fetch("/Productos",{
                 method:'POST',
                 body:JSON.stringify(producto),
                 headers:{

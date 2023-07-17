@@ -58,6 +58,7 @@
     font-family: Roboto, sans-serif;
     font-weight: 500;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
+    text-decoration: none;
 }
 
 .barra-lateral .menu a:hover {
@@ -119,10 +120,12 @@ display: none;
 @media screen and (max-width:575px) {
     .barra-lateral {
         min-height: auto;
+        
     }
     .barra-lateral .menu a {
-        display: inline-block;
+        display: flex;
         border-bottom: none;
+        
     }
     .dropdown-menu {
         margin: 10px -78px 0px;
@@ -145,29 +148,17 @@ display: none;
 
 
 
-@media screen and (max-width:575px) {
-    .barra-lateral {
-        height: auto;
-    }
-    .barra-lateral.menu a {
-        display: inline-block;
-        border-bottom: none;
-    }
-    .dropdown-menu {
-        margin: 20px -78 0px;
-    }
-    body {
-        font-size: 16px;
-        overflow: visible;
- 
-    }
-}
 
 
 @media screen and (max-width:580px) {
 
     .flex-posicion {
         display: block;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
     }
     .submenuDash{
         font-size: 10px;
@@ -177,4 +168,5 @@ display: none;
     .fa-square-caret-down{
         display: none;
     }
+  
 }

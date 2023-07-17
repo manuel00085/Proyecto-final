@@ -188,7 +188,7 @@ async function validarUsername() {
   if(!usernameInput.value==""){
 
     try {
-      const response = await fetch(`http://localhost:4000/api/users/${usernameInput.value}`, {
+      const response = await fetch(`/Usuario/${usernameInput.value}`, {
         method: 'GET',
       });
   
@@ -236,7 +236,7 @@ formularioRe.addEventListener('submit' ,(e)=>{
             };
           
             try {
-              const response = await fetch('http://localhost:4000/api/users', {
+              const response = await fetch('/Usuario', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'

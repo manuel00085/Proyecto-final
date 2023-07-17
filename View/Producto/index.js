@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
 const obtenerProducto = async idProducto =>{
 	console.log(idProducto)
 	try{
-		const resultado = await fetch(`http://localhost:4000/api/Productos/${idProducto}`)
+		const resultado = await fetch(`/Productos/${idProducto}`)
 		const producto = await resultado.json();
 		console.log(producto)
 		return producto; 
@@ -291,7 +291,7 @@ function enviarfavoritos(producto){
 			Titulo,
 			Imagen
 		}
-		const response = await fetch('http://localhost:4000/api/Productos/agregar-favorito', {
+		const response = await fetch('/Usuario/agregar-favorito', {
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json'

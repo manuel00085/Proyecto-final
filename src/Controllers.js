@@ -1,6 +1,13 @@
 const { default: axios } = require("axios")
+require("dotenv").config();
 
-const {PAYPAL_API,PAYPAL_API_CLIENT,PAYPAL_API_SECRET} = require('./confi');
+
+const PAYPAL_API_CLIENT = process.env.PAYPAL_API_CLIENT;
+
+const PAYPAL_API_SECRET = process.env.PAYPAL_API_SECRET
+
+const PAYPAL_API ="https://api-m.sandbox.paypal.com"
+
 
 
 
@@ -27,8 +34,8 @@ const { suma } = req.body
           brand_name:"Garcia Store",
           landing_page:"NO_PREFERENCE",
           user_action:"PAY_NOW",
-          return_url: 'http://localhost:4000/pay/capture-order',
-          cancel_url: 'http://localhost:4000/pay/cancel-order'
+          return_url: captureOrder,
+          cancel_url: deleteOrder
 
       }
     }
@@ -67,6 +74,14 @@ const { suma } = req.body
 
 }
 
+
+
+
+
+
+
+
+
 const captureOrder = async (req, res) => {
     try {
       const { token } = req.query;
@@ -99,7 +114,18 @@ const captureOrder = async (req, res) => {
     }
   };
 
+
+
+
+
+
+
 const deleteOrder = (req, res)=> res.redirect('/')
+
+
+
+
+
 
 
 const obtenerCompra = async (req, res) => {

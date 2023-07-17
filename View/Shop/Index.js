@@ -7,7 +7,7 @@ function mostrarArticulos() {
   
     
   
-    fetch('http://localhost:4000/api/Productos')
+    fetch('/Productos')
       .then(response => response.json())
       .then(data => {
         construirArticulos(data); // Llamar a la función con los datos

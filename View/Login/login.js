@@ -47,7 +47,7 @@ async function SolicitarBD(LoginUser) {
     
   
       try {
-        const response = await fetch(`http://localhost:4000/api/users/autentification`, {
+        const response = await fetch(`/Usuario/autentification`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
