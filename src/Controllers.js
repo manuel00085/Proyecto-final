@@ -34,8 +34,8 @@ const { suma } = req.body
           brand_name:"Garcia Store",
           landing_page:"NO_PREFERENCE",
           user_action:"PAY_NOW",
-          return_url: captureOrder,
-          cancel_url: deleteOrder
+          return_url: 'https://garciastore23.onrender.com//pay/capture-order',
+          cancel_url: 'https://garciastore23.onrender.com//pay/cancel-order'
 
       }
     }

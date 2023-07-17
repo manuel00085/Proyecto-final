@@ -27,6 +27,7 @@ const passport = require('passport');
 app.listen(PUERTO, () => {
     console.log(`el servidor wsta escuchando en el puerto ${PUERTO}...`);
 })
+console.log(PUERTO)
 
 
 ////----------middleware----------
