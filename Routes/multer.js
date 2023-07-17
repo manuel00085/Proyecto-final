@@ -12,11 +12,13 @@ const CURRENT_DIR = dirname(__filename)
 const MIMETYPES=['image/jpeg','image/png', 'image/jpg']
 
 const multerUpload = multer({
+    
     storage: multer.diskStorage({
         destination:join(CURRENT_DIR,'../Uploads'),
         filename:(req, file, cb)=>{
             const fileExtension = extname(file.originalname);
             const fileName = file.originalname.split(fileExtension)[0];
+            console.log("entro en multer")
 
             cb(null,`${fileName}-${Date.now()}${fileExtension}`)
 
@@ -37,6 +39,8 @@ console.log(CURRENT_DIR)
 
 routerM.post('/unpload', multerUpload.single('file'),(req,res)=>{
     console.log(req.file)
+    console.log(CURRENT_DIR)
+    console.log("entro en multer")
     const urlImg=req.file.filename
     
 
