@@ -1,20 +1,21 @@
-const { error } = require("console");
 const express = require("express");
-const { url } = require("inspector");
+
 const routerM = express.Router();
 const multer = require("multer")
-const {dirname, join, extname}= require("path")
+const path = require('path')
+const {extname}= require('path')
+const CURRENT_DIR = path.join(__dirname,"../Uploads")
 
 
 
 
-const CURRENT_DIR = dirname(__filename)
+//const CURRENT_DIR = dirname(__filename)
 const MIMETYPES=['image/jpeg','image/png', 'image/jpg']
 
 const multerUpload = multer({
     
     storage: multer.diskStorage({
-        destination:join(CURRENT_DIR,'../Uploads'),
+        destination:CURRENT_DIR,
         filename:(req, file, cb)=>{
             const fileExtension = extname(file.originalname);
             const fileName = file.originalname.split(fileExtension)[0];

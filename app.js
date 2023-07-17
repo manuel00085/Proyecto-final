@@ -10,9 +10,7 @@ const paymentRoutes = require('./Routes/payment');
 const multerRoutes = require('./Routes/multer');
 const productosRoutes = require('./Routes/productos')
 const passportRoutes = require('./src/confi-passport')
-const cookieParser = require('cookie-parser')
-const session = require('express-session');
-const passport = require('passport');
+
 
 
 
@@ -34,14 +32,6 @@ console.log(PUERTO)
 
     app.use(express.json())
     app.use(express.urlencoded({extended:false}))
-    app.use(cookieParser('mi secreto cookie'))
-    app.use(session({
-        secret:'mi secreto cookie',
-        resave: true,
-        saveUninitialized: true
-    }))
-    app.use(passport.initialize())
-    app.use(passport.session())
     app.use('/Usuario', userRoutes)
     app.use('/pay',paymentRoutes)
     app.use('/Multer',multerRoutes)
