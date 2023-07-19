@@ -16,7 +16,7 @@ const router = express.Router();
 
 
 router.post('/', async (req, res) => {
-  const { user, password, phone, email } = req.body;
+  const { user, password, phone, email, apellido } = req.body;
   console.log(req.body)
   
   
@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
       return res.status(400).json({ message: 'El email ya está registrado.' });
     }else{
       // Crear un nuevo usuario si el email no existe
-    const newUser = new User({ user, password, phone, email });
+    const newUser = new User({ user, password, phone, email, apellido });
     newUser.password = await newUser.encryPassword(password)
     await newUser.save();
     res.status(200).json({ message: 'Registro exitoso' });
@@ -40,6 +40,22 @@ router.post('/', async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: 'Error en el servidor' });
   }
+});
+
+const bcrypt = require('bcryptjs');
+
+router.put("/nuevacontra/:email", (req,res)=>{
+  console.log("nuevacontra")
+ 
+  const { pass,id } = req.body;
+
+  const hashedPassword = bcrypt.hashSync(pass, 10);
+  
+ 
+    User
+    .updateOne({_id:id},{$set:{password:hashedPassword}})
+    .then((data) => res.json(data))
+    .catch((error) => res.json({message: error}))
 });
 
 
@@ -66,9 +82,11 @@ router.post('/autentification', async (req, res) => {
     if (existingEmail){
       const match = await existingEmail.matchPassword(password)
       if (match) {
+        const id =existingEmail._id 
+        
         // Si la contraseña coincide, se autentica el usuario
 
-        return res.json({ email,password,message: 'Contraseña correcta'  });
+        return res.json({ email,password,id,message: 'Contraseña correcta'  });
         //return res.status(200).json({ message: 'Autenticación exitosa' });
       } else {
 
@@ -142,14 +160,14 @@ router.get("/compras/:email", (req,res)=>{
 
    //-----Actualizar un usuario 
 
-router.put("/users/:id", (req,res)=>{
-    const {id} = req.params;
-    const {name, age, email} = req.body;
-    userSchema
-    .updateOne({_id:id},{$set:{name,age,email}})
+router.put("/:email", (req,res)=>{
+  const { user, phone, email, apellido,id } = req.body;
+    User
+    .updateOne({_id:id},{$set:{user,phone,email,apellido}})
     .then((data) => res.json(data))
     .catch((error) => res.json({message: error}))
 });
+
 
 
 
@@ -166,7 +184,8 @@ router.put("/users/:id", (req,res)=>{
 
 router.delete("/:id", (req,res)=>{
     const { id } = req.params;
-    userSchema
+    console.log("Se eliminio el Usuario")
+    User
     .deleteOne({ _id: id })
     .then((data) => res.json(data))
     .catch((error) => res.json({message: error}))
@@ -242,6 +261,17 @@ router.get("/favoritos/:email", (req,res)=>{
   User
   .findOne({email:email})
   .then((data) => res.json(data.favorite))
+  .catch((error) => res.json({message: "error"}))
+});
+
+
+
+/////consultar usuario por email
+router.get("/:email", (req,res)=>{
+  const {email} = req.params;
+  User
+  .findOne({email:email})
+  .then((data) => res.json(data))
   .catch((error) => res.json({message: "error"}))
 });
 

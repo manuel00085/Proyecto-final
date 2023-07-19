@@ -31,6 +31,8 @@ const formularioRe = document.querySelector('#accion-register')
 const checkbox = document.querySelector('#checkAgre')
 const usernameInput = document.querySelector('#usernameInput');
 const inputPhone=document.querySelector('#phoneInput')
+const inputApellido=document.querySelector('#userapellidoInput')
+
 
 
 
@@ -46,7 +48,13 @@ usernameInput.addEventListener('input', e=>{
   //validarUsername()
 })
 
-
+let valuserApellido=false
+inputApellido.addEventListener('input', e=>{
+  const regex = /^\S*$/;
+  valuserApellido = regex.test(e.target.value);
+  validar(inputApellido,valuserApellido)
+  //validarUsername()
+})
 
 
 
@@ -121,22 +129,6 @@ matchInput.addEventListener('input',e=>{
     
 })
 
-
-
-
-
-
-
-//-------validar checkbox
-
-checkbox.addEventListener('click',()=>{
-    if(checkbox.checked){
-        console.log("esta checkeado")
-    }else{
-        console.log('no esta chekeado')
-    }
-    
-})
 
 
 
@@ -223,12 +215,13 @@ async function validarUsername() {
 
 formularioRe.addEventListener('submit' ,(e)=>{
   e.preventDefault()
-    if(valemail  && checkbox.checked && valpassw  && valephone && valMatch){
+    if(valemail  && valuserApellido && valpassw  && valephone && valMatch){
         console.log("esta todo ok")
       
         const createUser = async () => {
             const user = {
               user: usernameInput.value,
+              apellido:inputApellido.value,
               password: passInput.value,
               email: mailInput.value,
               phone: parseInt(inputPhone.value)

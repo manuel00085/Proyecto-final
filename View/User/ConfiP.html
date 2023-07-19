@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/Componentes/necolas.github.io_normalize.css_8.0.1_normalize.css">
     <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="/Componentes/HeaderStyle.css">
+    <link rel="stylesheet" href="./css/Styleperfil.css">
     <script src="https://kit.fontawesome.com/d0b05c108e.js" crossorigin="anonymous"></script>
 
 </head>
@@ -27,17 +28,86 @@
             </nav>
         </div>
         <main>
+            <div id="mostraconfi">
+                <h1> Perfil de Usuario</h1>
+
+
+            </div>
+       
+            <section class="modal ">
+                <div class="modal__container">
+                    <div class="Btnx"><p>X</p></div>
+                    <h1>Editar Informacion Personal</h1>
+                    <div class="flex-input">
+                        <div class="inputED">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" placeholder="Nombre" name="nombre" id="inputname">
+
+                        </div>
+                        <div class="inputED">
+                            <label for="">Apellido</label>
+                            <input type="text" placeholder="Apellido" id="inputApellido">
+                        </div>
+                        <div class="inputED">
+                            <label for="">Correo</label>
+                            <input type="text" placeholder="Correo" id="inputcorreo">
+                        </div>
+                        <div class="inputED">
+                            <label for="">Telefono</label>
+                            <input type="text" placeholder="Telefono" id="inputtlefono">
+                        </div>
+                        
+                       
+                        
+
+                    </div>
+                    <button class="BtnF" id="guardarbtn">Guardar</button>
+                    
+
+                </div>
+
+            </section>
+
+
+            <section class="modal  editC">
+                <div class="modal__container">
+                    <div class="Btnx BtnxC"><p>X</p></div>
+                    <h1>Editar Contraseña</h1>
+                    <div class="flex-input">
+                        <div class="inputED">
+                            <label for="nombre">Contraseña Actual</label>
+                            <input type="text" placeholder="Contraseña" name="nombre" id="inputcontra">
+
+                        </div>
+                        <div class="inputED">
+                            <label for="">Nueva Contraseña</label>
+                            <input type="text" placeholder="Nueva Contraseña" id="inputnuevacontra">
+                        </div>
+                        <div class="inputED">
+                            <label for="">Repetir Nueva Contraseña</label>
+                            <input type="text" placeholder="Repita su Contraseña" id="inputrepertir">
+                        </div>
+                       
+
+                    </div>
+                    <button id="guardarbtnC" class="BtnF">Guardar</button>
+                    
+
+                </div>
+
+            </section>
+        
             
 
     
-
         </main>
     </div>
 
 
 
-
+    <script src="./confip.js"></script>
     <script  src="/Componentes/Header.js"></script>
-    <script src="./favoritos.js"></script>
+    <script src="./modal.js"></script>
+    
 </body>
 </html>
