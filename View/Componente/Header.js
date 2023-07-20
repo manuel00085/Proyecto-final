@@ -72,11 +72,11 @@ header.innerHTML = `
 </ul>
 <button class="Hambuerguesa"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
 </div>
-<section class="modal ">
+<section class="modalC ">
 
 
 <div id="carritoM">
-<div class="Btnx"><p>X</p></div>
+<div class="BtnxF"><p>X</p></div>
 
 <div class="modal__container" id="lista-carritoM">
 
@@ -107,8 +107,8 @@ if(window.location.pathname=='/Shop/'){
 
 
 const CarritoMovile = document.querySelector('.CarritoMovile')
-const btnCerrar = document.querySelector('.Btnx')
-const modal = document.querySelector('.modal')
+const btnCerrar = document.querySelector('.BtnxF')
+const modal = document.querySelector('.modalC')
 
 console.log(CarritoMovile)
 CarritoMovile.addEventListener('click', (e)=>{
