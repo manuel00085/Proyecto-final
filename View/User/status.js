@@ -29,9 +29,9 @@ function mostrascompras(){
         const rowC = document.createElement('tr');
 
         rowC.innerHTML=`
-        <td>${correo}</td>
+       
         <td>${dataTimePago}</td>
-        <td>${id}</td>
+       
         <td>${nombre}</td>
         <td>${precio}</td>
         <td>${status}</td>

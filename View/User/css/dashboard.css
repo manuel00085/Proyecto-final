@@ -2,6 +2,10 @@
 
 /* dashboard */
 
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 main{
     display: flex;
     width: 100%;

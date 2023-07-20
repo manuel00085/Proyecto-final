@@ -183,6 +183,7 @@ if(!user){
         <a href="/Userdash/index.html"><p class="text">Mis Favoritos</p></a>
         <a href="/Userdash/status.html"><p class="text">Status de compras</p></a>
         <a href="/Userdash/facturacion.html"><p class="text">Facturacion</p></a>
+        <a href="/Userdash/ConfiP.html"><p class="text">Configuarion de perfil</p></a>
         <button id="cerrarSesion">Cerrar Sesion</button>
     </div>
   `
