@@ -49,6 +49,7 @@ main {
 
 	border-bottom: 1px solid #e4e4e4;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -338,5 +339,6 @@ main {
 
 main {
   display: block;
+  padding: 20px;
 } 
 }

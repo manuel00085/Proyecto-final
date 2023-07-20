@@ -14,7 +14,7 @@ if(!adminOn){
         const inputUsername = prompt('Ingrese su nombre de usuario:');
         const inputPassword = prompt('Ingrese su contraseña:');
       
-        if (inputUsername === adminCredentials.username && inputPassword === adminCredentials.password) {
+        if (inputUsername == adminCredentials.username && inputPassword == adminCredentials.password) {
             localStorage.setItem('adminCredentials', JSON.stringify(adminCredentials))
           alert('Inicio de sesión exitoso. ¡Bienvenido, administrador!');
          

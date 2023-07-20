@@ -35,6 +35,10 @@ const proSchema = new mongoose.Schema({
         type: String,
         require:true
       },
+      Descripcion:{
+        type: String,
+        require:true
+      }
       
       
 

@@ -9,12 +9,13 @@
 
         const Titulo = document.querySelector('#Nombre').value;
         const Precio = document.querySelector('#Precio').value;
-        const Categoria = document.querySelector('#categoria').value;
+        const Categoria = document.querySelector('#Categoria').value;
         const Id = parseInt(document.querySelector('#Identificador').value);
         const Imagen = document.querySelector('#Imagen');
         const Marca = document.querySelector('#Marca').value;
         const Tipo = document.querySelector('#Tipo').value;
         const Genero = document.querySelector('#Genero').value;
+        const Descripcion = document.querySelector('#Descripcion').value;
 
         const file = Imagen.files[0]
         const formData = new FormData();
@@ -45,7 +46,8 @@
             Imagen:`/ImgProducto/${data}`,
             Marca,
             Tipo,
-            Genero
+            Genero,
+            Descripcion
         }
 
         try{

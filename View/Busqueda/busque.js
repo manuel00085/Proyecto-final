@@ -16,7 +16,12 @@ fetch(`/Productos/Seach/${Busqueda}`)
         Mensaje.textContent="No hay resultado de Busqueda"
         listado.appendChild(Mensaje)
       }else{
+       
         construirBusqueda(data)
+        const listado = document.querySelector('.titulo')
+        const Mensaje = document.createElement('h1')
+        Mensaje.textContent="Resultados de su busqueda"
+        listado.appendChild(Mensaje)
       }
         
       console.log(data); // Llamar a la función con los datos

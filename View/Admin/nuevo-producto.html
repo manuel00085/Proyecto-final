@@ -50,20 +50,23 @@
                                     class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     id="Precio"
                                     name="precio"
-                                    type="number"
+                                    type=""
                                     placeholder="Precio Producto"
                                 />
                             </div>
 
                             <div class="mb-4">
-                                <label class="block text-gray-700 text-sm font-bold mb-2" for="Categoria">Categoria</label>
-                                <input 
-                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="categoria"
-                                    name="Categoria"
-                                    type="text"
-                                    placeholder="Categoria Producto"
-                                />
+                                <label class="col-sm-4 col-lg-4 col-form-label">Categoria:</label>
+                                <div class="col-sm-8 col-lg-8" >
+                                    <select name="origen" id="Categoria" class="form-select form-select-lg mb-3 col-lg-12" aria-label=".form-select-lg example">
+                                        <option value="">Seleccionar</option>
+                                        <option value="Zapato">Zapato</option>
+                                        <option value="Reloj">Reloj</option>
+                                        <option value="Gorra">Gorra</option>
+                                        <option value="Media">Media</option>
+                                        <option value="Perfume">Perfume</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <div class="mb-4">
@@ -88,14 +91,15 @@
                                 />
                             </div>
                             <div class="mb-4">
-                                <label class="block text-gray-700 text-sm font-bold mb-2" for="Genero">Genero</label>
-                                <input 
-                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="Genero"
-                                    name="Genero"
-                                    type="text"
-                                    placeholder="Genero Producto"
-                                />
+                                <label class="col-sm-4 col-lg-4 col-form-label">Genero:</label>
+                                <div class="col-sm-8 col-lg-8" >
+                                    <select name="origen" id="Genero" class="form-select form-select-lg mb-3 col-lg-12" aria-label=".form-select-lg example">
+                                        <option value="">Seleccionar</option>
+                                        <option value="Hombre">Hombre</option>
+                                        <option value="Mujer">Mujer</option>
+                                 
+                                    </select>
+                                </div>
                             </div>
 
                             <div class="mb-4">
@@ -110,13 +114,26 @@
                             </div>
 
                             <div class="mb-4">
-                                <label class="block text-gray-700 text-sm font-bold mb-2" for="Tipo">Tipo</label>
+                                <label class="col-sm-4 col-lg-4 col-form-label">Tipo:</label>
+                                <div class="col-sm-8 col-lg-8" >
+                                    <select name="origen" id="Tipo" class="form-select form-select-lg mb-3 col-lg-12" aria-label=".form-select-lg example">
+                                        <option value="">Seleccionar</option>
+                                        <option value="Running">Running</option>
+                                        <option value="Basketball">Basketball</option>
+                                        <option value="Skateboarding">Skateboarding</option>
+                                        <option value="Futbol">Futbol</option>
+                                        <option value="Otros">Otros</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="Descripcion">Descripcion</label>
                                 <input 
-                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="Tipo"
-                                    name="Tipo"
+                                    class="appearance-none border rounded w-full py-4 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="Descripcion"
+                                    name="Descripcion"
                                     type="text"
-                                    placeholder="Tipo de producto"
+                                    placeholder="Descripcion del producto"
                                 />
                             </div>
 

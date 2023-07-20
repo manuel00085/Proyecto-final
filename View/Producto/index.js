@@ -38,7 +38,8 @@ const obtenerProducto = async idProducto =>{
 async function construirProducto(producto) {
 	const mostrarProducto = document.querySelector('#main');
 	
-	const  { Titulo, Precio,Imagen,Id,Marca} = await producto;
+	const  { Titulo, Precio,Imagen,Id,Marca, Descripcion, Genero} = await producto;
+	
 	
 	 mostrarProducto.innerHTML +=`
 	<div class="container-img">
@@ -50,6 +51,7 @@ async function construirProducto(producto) {
 <div class="container-info-product">
 	<div class="container-price">
 		<h1>${Marca} - ${Titulo}</h1>
+		<p>${Genero}</p>
 		
 	</div>
 
@@ -111,41 +113,12 @@ async function construirProducto(producto) {
 			<i class="fa-solid fa-chevron-down"></i>
 		</div>
 		<div class="text-description">
-			<p>
-				Lorem ipsum dolor, sit amet consectetur adipisicing
-				elit. Laboriosam iure provident atque voluptatibus
-				reiciendis quae rerum, maxime placeat enim cupiditate
-				voluptatum, temporibus quis iusto. Enim eum qui delectus
-				deleniti similique? Lorem, ipsum dolor sit amet
-				consectetur adipisicing elit. Sint autem magni earum est
-				dolorem saepe perferendis repellat ipsam laudantium cum
-				assumenda quidem quam, vero similique? Iusto officiis
-				quod blanditiis iste?
-			</p>
-		</div>
-	</div>
-
-	<div class="container-additional-information">
-		<div class="title-additional-information">
-			<h4>Información adicional</h4>
-			<i class="fa-solid fa-chevron-down"></i>
-		</div>
-		<div class="text-additional-information hidden">
-			<p>-----------</p>
+			<p>${Descripcion}</p>
 		</div>
 	</div>
 
 
-	<div class="container-social">
-		<span>Compartir</span>
-		<div class="container-buttons-social">
-			<a href="#"><i class="fa-solid fa-envelope"></i></a>
-			<a href="#"><i class="fa-brands fa-facebook"></i></a>
-			<a href="#"><i class="fa-brands fa-twitter"></i></a>
-			<a href="#"><i class="fa-brands fa-instagram"></i></a>
-			<a href="#"><i class="fa-brands fa-pinterest"></i></a>
-		</div>
-	</div>
+
 	
 	`
 
@@ -202,9 +175,6 @@ function activar(){
 	const toggleDescription = document.querySelector(
 		'.title-description'
 	);
-	const toggleAdditionalInformation = document.querySelector(
-		'.title-additional-information'
-	);
 
 	
 	// Constantes Contenido Texto
@@ -220,10 +190,7 @@ function activar(){
 		contentDescription.classList.toggle('hidden');
 	});
 	
-	toggleAdditionalInformation.addEventListener('click', () => {
-		contentAdditionalInformation.classList.toggle('hidden');
-	});
-
+	
 	
 	
 

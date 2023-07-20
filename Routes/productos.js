@@ -9,7 +9,7 @@ const Articulo = require("../Models/Articulos");
 
 
 router.post('/', async (req, res) => {
-    const { Titulo, Categoria, Precio, Id, Marca, Imagen,Tipo,Genero} = req.body;
+    const { Titulo, Categoria, Precio, Id, Marca, Imagen,Tipo,Genero, Descripcion} = req.body;
     console.log(req.body)
     console.log("creo producto")
   
@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
   
     try{
   
-      const newPro = new Articulo({ Titulo, Categoria, Precio, Id, Marca, Imagen, Tipo, Genero });
+      const newPro = new Articulo({ Titulo, Categoria, Precio, Id, Marca, Imagen, Tipo, Genero, Descripcion });
       await newPro.save();
       return res.status(200).json({message: 'Producto creado con exito'})
   
