@@ -26,6 +26,20 @@
     width: 400px;
 
 }
+#facturacionM{
+    height: 40px;
+    width: 95px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fd8320ef;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .5s ease;
+    display: flex;
+    justify-content: center;
+}
 .flex-buscador input{
     
     width: 100%;
@@ -110,6 +124,11 @@
 
 
 }
+.flexbtnf{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
 .submenu:hover #carrito{
     
     display: block;
@@ -142,22 +161,38 @@
      
  
  }
+ #lista-carritoM tr,
  #lista-carrito tr{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     align-items: center
  }
+ #lista-carritoM td,
  #lista-carrito td{
     align-items: center;
     text-align: center;
 
  }
-
+ #lista-carritoM p,
  #lista-carrito p{
     color: #222;
  }
 
+ .Btnx{
+    display: flex;
+    justify-content: end;
+    
+   
+    cursor: pointer;
+ }
+ .Btnx p{
+    background-color: #b9b3b3;
+    border-radius: 50%;
+    padding: 8px;
+    font-weight: 600;
+
+ }
 
 /* visitante  */
 
@@ -368,8 +403,13 @@
     
 }
 
+
 .importeTotal button:hover{
     transform: scale(1.1);
+}
+
+.opcionH{
+    display: none;
 }
 
 
@@ -383,7 +423,9 @@
 .CarritoMovile{
     display: none;
 }
-
+.sesionbtnM{
+    display: none;
+}
 
 @media screen and (max-width:1230px) {
   
@@ -395,7 +437,12 @@
 
 @media screen and (max-width:900px) {
 
+    
+    
 
+    .ver{
+        display: block;
+    }
     .CarritoMovile{
         display: flex;
         align-items: center;
@@ -429,22 +476,28 @@ border: none;
         visibility: hidden;
         display: flex;
         flex-direction: column;
-       gap: 1rem;
-       
+        gap: 1rem;
         position: absolute;
-        background-color: #555;
+        backdrop-filter: blur(50px);
+        
         top: 0;
         right: 0;
         bottom: 0;
-        padding: 2rem;
+        padding: 1rem;
         box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
 
         
         
     }
+
+
     #navbar.visible{
         opacity: 1;
         visibility: visible;
+    }
+    .submenu,
+    .submenu i{
+        display: none;
     }
 
     .Cerrar{
@@ -458,13 +511,22 @@ border: none;
         text-align: center;
         
     }
+
     
     #navbar li a{
         text-decoration: none;
         font-size: 20px;
-        font-weight: 400;
-        color:#ffffff;
+        font-weight: 600;
+        color:#131212;
         transition: 0.3s ease ;
+        display: flex;
+        justify-content: start;
+        text-align: start;
+        border-bottom: #b9b3b3 solid 1px;
+    }
+
+    #navbar li a:hover{
+        color: rgb(180, 182, 181);
     }
 
 .logop{
@@ -495,7 +557,7 @@ border: none;
     padding: 10px 5px;
     background: #E3E6F3;
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-   
+   gap: 8px;
     top: 0;
     left: 0;
     font-family: 'Spartan', sans-serif;
@@ -503,22 +565,7 @@ border: none;
     
 
 }
-.submenu:hover #carrito{
-    
-    display: block;
-    position: absolute;
-    right: 0;
-    top:100%;
-    z-index: 1;
-    padding: 10px;
-    height: auto;
-    width: auto;
-    max-width: 400px;
-    border-radius: 10px;
-    backdrop-filter: blur(50px);
-    border: 3px  solid white;
-    
-}
+
 
 
 
@@ -546,8 +593,65 @@ border: none;
 
 
 }
+.Cerrar i{
+    padding: 5px;
+    background-color: #000;
+    border-radius: 100%;
+}
+
 
 
 }
 
+.flex-input{
+    display: grid;
+    justify-items: end;
+    justify-content: center;
+    margin: 6px;
+}
 
+
+.modal{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s ;
+  
+    
+
+}
+
+
+
+.modal__container{
+    width: 90%;
+    margin: auto;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    background-color: aliceblue;
+    padding: 1em;
+    
+    transform: var(--transform);
+    transition: var(--transition);
+    
+
+
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0) ;
+  
+}

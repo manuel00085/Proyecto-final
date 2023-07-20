@@ -27,6 +27,16 @@ header.innerHTML = `
 <button class="Cerrar"><i class="fa-regular fa-circle-xmark" style="color: #ffffff;"></i></button>
     <li><a id="home" href="/index.html">Inicio</a></li>
     <li><a id="tienda" href="/Shop">Tienda</a></li>
+    <div class="sesionbtn sesionbtnM">
+      <a href="/login"><button>Iniciar Sesion</button></a>
+  </div>
+    <div class="opcionH">
+    <li><a  href="/Userdash/index.html">Mis favoritos</a></li>
+    <li><a  href="/Userdash/facturacion.html">Facturacion</a></li>
+    <li><a  href="/Userdash/status.html">Mis Compras</a></li>
+    <li><a  href="/Userdash/ConfiP.html">Configuracion de Perfil</a></li>
+    
+    </div>
     <li class="submenu"><i><svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="40"><path d="m480-574-42-42 74-74H330v-60h182l-74-74 42-42 146 146-146 146ZM289.788-80Q260-80 239-101.212q-21-21.213-21-51Q218-182 239.212-203q21.213-21 51-21Q320-224 341-202.788q21 21.213 21 51Q362-122 340.788-101q-21.213 21-51 21Zm404 0Q664-80 643-101.212q-21-21.213-21-51Q622-182 643.212-203q21.213-21 51-21Q724-224 745-202.788q21 21.213 21 51Q766-122 744.788-101q-21.213 21-51 21ZM62-820v-60h116l170 364h287.706L796-796h67L701-493q-11 19-28.559 30.5Q654.881-451 634-451H331l-56 104h491v60H284q-37.663 0-57.332-30Q207-347 224-378l64-118-148-324H62Z"/></svg></i>
         <div id="carrito">
             <table id="lista-carrito" class="u-full-width">
@@ -62,6 +72,25 @@ header.innerHTML = `
 </ul>
 <button class="Hambuerguesa"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
 </div>
+<section class="modal ">
+
+
+<div id="carritoM">
+<div class="Btnx"><p>X</p></div>
+
+<div class="modal__container" id="lista-carritoM">
+
+</div>
+<div class="flexbtnf">
+<button id="facturacionM">Agregar Facturacion</button>
+</div>
+
+
+</div>
+    
+    
+
+</section>
 
 `;
 
@@ -70,13 +99,39 @@ if(window.location.pathname=='/Shop/'){
 
 }else{
   console.log("activo home")
-}
-
-
-
 
 
 }
+
+
+
+
+const CarritoMovile = document.querySelector('.CarritoMovile')
+const btnCerrar = document.querySelector('.Btnx')
+const modal = document.querySelector('.modal')
+
+console.log(CarritoMovile)
+CarritoMovile.addEventListener('click', (e)=>{
+    e.preventDefault()
+
+    modal.classList.add('modal--show')
+    
+})
+
+btnCerrar.addEventListener('click',(e)=>{
+    e.preventDefault()
+
+    modal.classList.remove('modal--show')
+
+})
+
+
+
+
+
+
+}
+
 
 crearHeader()
 
@@ -171,7 +226,11 @@ if(!user){
   
   `
 
+  const quitarMenumovil = document.querySelector('.sesionbtnM')
+  quitarMenumovil.classList.add('ver')
+
   InicioSesion.appendChild(visitante)
+ 
 
 }else{
 
@@ -187,6 +246,8 @@ if(!user){
         <button id="cerrarSesion">Cerrar Sesion</button>
     </div>
   `
+  const quitarMenumovil = document.querySelector('.opcionH')
+  quitarMenumovil.classList.add('ver')
 
   InicioSesion.appendChild(UsuarioL)
 
@@ -260,6 +321,8 @@ function sincronizarStorage(){
 const contenedorCarrito = document.querySelector (`#lista-carrito`);
 const vaciarCarritoBtn = document.querySelector (`#vaciar-carrito`);
 vaciarCarritoBtn.addEventListener(`click`, eliminarTodos)
+const contenedorCarritoM = document.querySelector (`#lista-carritoM`);
+
 
 
 
@@ -267,6 +330,7 @@ function carritoHTML(){
   var cantidadC = document.querySelector('#CantidadCarrito');
   cantidadC.innerHTML=`
   ${articulosCarrito.length}
+  
   `
    
   console.log(cantidadC)
@@ -289,6 +353,27 @@ function carritoHTML(){
     
     `
     contenedorCarrito.appendChild(row);
+    
+    
+  })
+  vaciarCarritoM()
+  articulosCarrito.forEach(articulos =>{
+    const row = document.createElement('tr');
+    row.innerHTML=`
+    <td>
+    <img src="${articulos.Imagen}" width=100 height=90>
+    </td>
+    <td>${articulos.Titulo}</td>
+    <td>${articulos.Precio}</td>
+    <td>${articulos.Cantidad}</td>
+    <td>
+        <a href="#" class="borrar-curso" data-id="${articulos.Id}">X</a>
+        </td>
+    
+    `
+    contenedorCarritoM.appendChild(row);
+    
+    
   })
   sincronizarStorage()
 }
@@ -301,6 +386,13 @@ function vaciarCarrito(){
   while(contenedorCarrito.firstChild){
 
       contenedorCarrito.removeChild(contenedorCarrito.firstChild)
+}}
+
+function vaciarCarritoM(){
+
+  while(contenedorCarritoM.firstChild){
+
+      contenedorCarritoM.removeChild(contenedorCarritoM.firstChild)
 }}
 
 
@@ -328,6 +420,10 @@ function eliminarTodos(){
 const carrito = document.querySelector(`#carrito`);
 
 carrito.addEventListener(`click`, eliminarCurso)
+
+const carritoM = document.querySelector(`#carritoM`);
+
+carritoM.addEventListener(`click`,eliminarCurso)
 
 
 function eliminarCurso(e){
@@ -421,7 +517,9 @@ function divTotal(){
 
         
   const  btnFacturacion=document.querySelector('#facturacion')
+  const  btnFacturacionm=document.querySelector('#facturacionM')
   btnFacturacion.addEventListener('click',agregarFacturacion)
+  btnFacturacionm.addEventListener('click', agregarFacturacion)
   
   function agregarFacturacion(){
     if(user){

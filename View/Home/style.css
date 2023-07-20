@@ -14,7 +14,7 @@ h1{
 h2{
     font-size: 46px;
     line-height: 54px;
-    color: #222;
+    color: #807d7d;
 }
 h4{
     font-size: 20px;
@@ -54,6 +54,22 @@ body{
     width: 100%;
     
 }
+.tiyulo{
+    height: 500px;
+    width: 100%;
+    background-image: url(./portadas/1.png);
+    background-size: cover;
+}
+
+.titulo2{
+    height: 500px;
+    width: 100%;
+    background-image: url(./portadas/4.png);
+    
+    
+    
+
+}
 
 
 
@@ -61,12 +77,18 @@ body{
     display: flex;
     text-align: center;
     padding: 30px;
-    border: #070606 2px;
+    border: #747171 0.5px;
+    background-color: #ffffff;
     
     
 }
 .info-carac{
     margin: 2%;
+    border: #1a1a1a solid 2px;
+    padding: 15px;
+    border-radius: 5px;
+    
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5)
 }
 
 .info-carac img{
@@ -83,11 +105,7 @@ body{
 
 }
 
-.info-carac a{
-    text-decoration: none;
-    font-weight: 600;
-    color: #070606;
-}
+
 .features-banner{
     background-image: url(./img/interior-de-una-tienda-de-zapatos-6411a34fe8560.webp);
    
@@ -328,9 +346,50 @@ footer .copyright{
     .flex-carac{
         display: block;
         text-align: center;
-        padding: 30px;
-        border: #070606 2px;
+        
+       
         
         
     }
+}
+
+@media screen and (max-width:580px) {
+    .tiyulo{
+        height: 500px;
+        width: 100%;
+        background-image: url(./portadas/1.png);
+        background-size: cover;
+        background-position:87%;
+    }
+
+    .titulo2{
+        height: 500px;
+        width: 100%;
+        background-image: url(./portadas/4.png);
+        background-size: cover;
+        background-position:80%;
+        
+        
+        
+    
+    }
+    
+    .section-p1{
+        padding: 0px 0px;
+    }
+
+    #banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image:url(./img/wallpaperbetter2.jpg) ;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    background-size: cover;
+    background-position: center;}
+    
+  
 }
