@@ -1,11 +1,14 @@
 *{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    height: 100vh;
 }
 main{
     background-image: url(./4.png);
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 100%;
 }
 
 #accion-register{

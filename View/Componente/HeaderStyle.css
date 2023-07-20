@@ -522,7 +522,7 @@ border: none;
         display: flex;
         justify-content: start;
         text-align: start;
-        border-bottom: #b9b3b3 solid 1px;
+       
     }
 
     #navbar li a:hover{
