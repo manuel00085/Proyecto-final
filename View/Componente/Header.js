@@ -72,11 +72,11 @@ header.innerHTML = `
 </ul>
 <button class="Hambuerguesa"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
 </div>
-<section class="modal ">
+<section class="modalC ">
 
 
 <div id="carritoM">
-<div class="Btnx"><p>X</p></div>
+<div class="BtnxF"><p>X</p></div>
 
 <div class="modal__container" id="lista-carritoM">
 
@@ -107,8 +107,8 @@ if(window.location.pathname=='/Shop/'){
 
 
 const CarritoMovile = document.querySelector('.CarritoMovile')
-const btnCerrar = document.querySelector('.Btnx')
-const modal = document.querySelector('.modal')
+const btnCerrar = document.querySelector('.BtnxF')
+const modal = document.querySelector('.modalC')
 
 console.log(CarritoMovile)
 CarritoMovile.addEventListener('click', (e)=>{
@@ -242,7 +242,7 @@ if(!user){
         <a href="/Userdash/index.html"><p class="text">Mis Favoritos</p></a>
         <a href="/Userdash/status.html"><p class="text">Status de compras</p></a>
         <a href="/Userdash/facturacion.html"><p class="text">Facturacion</p></a>
-        <a href="/Userdash/ConfiP.html"><p class="text">Configuarion de perfil</p></a>
+        <a href="/Userdash/ConfiP.html"><p class="text">Configuracion de perfil</p></a>
         <button id="cerrarSesion">Cerrar Sesion</button>
     </div>
   `

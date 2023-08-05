@@ -179,14 +179,14 @@
     color: #222;
  }
 
- .Btnx{
+ .BtnxF{
     display: flex;
     justify-content: end;
     
    
     cursor: pointer;
  }
- .Btnx p{
+ .BtnxF p{
     background-color: #b9b3b3;
     border-radius: 50%;
     padding: 8px;
@@ -522,7 +522,7 @@ border: none;
         display: flex;
         justify-content: start;
         text-align: start;
-        border-bottom: #b9b3b3 solid 1px;
+       
     }
 
     #navbar li a:hover{
@@ -611,7 +611,7 @@ border: none;
 }
 
 
-.modal{
+.modalC{
     position:fixed;
     top: 0;
     left: 0;
