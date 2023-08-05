@@ -9,7 +9,7 @@ const userRoutes = require("./Routes/User");
 const paymentRoutes = require('./Routes/payment');
 const multerRoutes = require('./Routes/multer');
 const productosRoutes = require('./Routes/productos')
-const passportRoutes = require('./src/confi-passport')
+
 
 
 
@@ -36,7 +36,7 @@ console.log(PUERTO)
     app.use('/pay',paymentRoutes)
     app.use('/Multer',multerRoutes)
     app.use('/Productos',productosRoutes)
-    app.use('/pass', passportRoutes)
+   
  
 
     
