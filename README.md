@@ -34,5 +34,5 @@
 url render : https://garciastore23.onrender.com
 
 Para acceder al admin 
-usuario : admin
+usuario : admin ,
 contraseña: admin123
